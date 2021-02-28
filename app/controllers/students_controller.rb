@@ -1,3 +1,4 @@
+require 'pry'
 class StudentsController < ApplicationController
   
   def index
@@ -9,6 +10,8 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @stu = params[:student]  
+    render 'students/new'
   end
 
 end
